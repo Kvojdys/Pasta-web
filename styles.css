@@ -2,7 +2,7 @@
   --brand: #558639;
   --text: #2e1c14;
   --muted: #7b5f4d;
-  --bg: #fcfdf6;
+  --bg: #b0aeac;
   --bg-alt: #f7f1eb;
   --border: #e8ddd4;
   --card-shadow: 0 5px 24px rgba(0,0,0,.05);
@@ -23,7 +23,9 @@ a:hover { text-decoration: underline; }
 
 .container { width: min(1120px, 92vw); margin: 0 auto; }
 .section { padding: 64px 0; }
-.section h2 { font-size: clamp(24px, 2.6vw, 36px); margin: 0 0 16px; }
+.section h2 { font-size: clamp(24px, 2.6vw, 36px); margin: 0 0 16px; color: #2e1c14; }
+.section h3 { font-size: clamp(24px, 2.6vw, 36px); margin: 0 0 16px; color: #2e1c14; }
+
 .section p { margin: 0 0 12px; }
 .section-alt { background: var(--bg-alt); }
 
@@ -31,7 +33,7 @@ a:hover { text-decoration: underline; }
 @media (min-width: 900px) { .grid-2 { grid-template-columns: 1.1fr 0.9fr; align-items: center; } }
 
 /* Header */
-.site-header { position: sticky; top: 0; background: rgba(253,250,246,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 20; }
+.site-header { position: sticky; top: 0; background: rgba(222, 222, 222, 0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 20; }
 .nav { display: flex; align-items: center; justify-content: space-between; min-height: 64px; }
 .brand { font-weight: 700; letter-spacing: .2px; font-size: 18px; color: var(--text); }
 .brand span { color: var(--brand); }
@@ -51,7 +53,7 @@ a:hover { text-decoration: underline; }
   left: 0;
   right: 0;
   height: 40%;
-  background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+  background: linear-gradient(to top, rgb(0, 0, 0), transparent);
   z-index: 0;
 }
 .hero-content { position: relative; z-index: 1; }
@@ -70,17 +72,18 @@ a:hover { text-decoration: underline; }
   .hero > img { object-position: 50% var(--hero-focus-y, 6%); }
 }
 
-/* Reviews */
+/* Reviews 
 .reviews { display: grid; grid-template-columns: 1fr; gap: 16px; }
 @media (min-width: 800px) { .reviews { grid-template-columns: repeat(3, 1fr); } }
 .review { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: var(--card-shadow); }
 .stars { letter-spacing: 2px; color: #e2a17f; font-weight: 700; }
 .reviewer { color: var(--muted); font-size: 14px; margin-top: 8px; }
+*/
 
 /* Services */
 .cards { display: grid; gap: 16px; grid-template-columns: 1fr; }
 @media (min-width: 700px) { .cards { grid-template-columns: repeat(3, 1fr); } }
-.card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: var(--card-shadow); display: grid; gap: 10px; }
+.card { background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: var(--card-shadow); display: grid; gap: 10px; }
 .card h3 { margin: 0; font-size: 20px; }
 .price-list { display: grid; gap: 8px; margin-top: 8px; }
 .price-list div { display: flex; justify-content: space-between; padding: 8px 10px; background: var(--bg-alt); border-radius: 10px; }
@@ -109,7 +112,7 @@ input:focus, textarea:focus { outline: none; border-color: var(--brand); box-sha
 .fail { color: #b1002b; }
 
 /* Footer */
-.site-footer { border-top: 1px solid var(--border); padding: 24px 0; background: #fcf7f1; margin-top: 32px; }
+.site-footer { border-top: 0px solid var(--border); padding: 24px 0; background: #b0aeac; margin-top: 32px; }
 .footer-grid { display: grid; grid-template-columns: 1fr auto auto; gap: 12px; align-items: center; }
 .footer-grid .social { display: flex; gap: 12px; }
 .to-top { justify-self: end; }
@@ -170,14 +173,16 @@ input:focus, textarea:focus { outline: none; border-color: var(--brand); box-sha
 }
 
 
+
+
 /* Barevné oddělení sekcí */
 .section {
-  background-color: #f3f3f3; /* výchozí bílá */
+  background-color: #e0e0e0; /* výchozí bílá */
   padding: 4rem 1rem;
 }
 
 .section.alt-bg {
-  background-color: #e4e4e4; /* béžová */
+  background-color: #b0aeac; /* béžová */
 }
 
 
@@ -187,6 +192,7 @@ input:focus, textarea:focus { outline: none; border-color: var(--brand); box-sha
 #contact .section-title {
   margin: 0 0 1.5rem;
   text-align: center;
+  
 }
 
 /* dvousloupcový grid + vycentrování celé sekce */
@@ -198,6 +204,7 @@ input:focus, textarea:focus { outline: none; border-color: var(--brand); box-sha
   margin: 0 auto;                           /* vystředí na střed */
   padding-inline: 1rem;                     /* odsazení od krajů viewportu */
   align-items: start;
+  
 }
 
 /* obě strany jako stejné „karty“ */
@@ -210,7 +217,7 @@ input:focus, textarea:focus { outline: none; border-color: var(--brand); box-sha
 }
 
 /* text nad formulářem */
-#contact .intro { margin: 0 0 1rem; color: var(--muted, #7b5f4d); }
+#contact .intro { margin: 0 0 1rem; color: var(--muted, #e7e7e7); }
 
 /* formulář */
 #contact .contact-form { display: grid; gap: .9rem; }
@@ -279,7 +286,8 @@ input:focus, textarea:focus { outline: none; border-color: var(--brand); box-sha
 /* HERO – desktop */
 .hero-overlay {
   align-items: flex-end;
-  padding-bottom: 23%;   /* posun textu dolů – můžeš doladit číslem */
+  padding-bottom: 5%;
+  padding-right: 65%;   /* posun textu dolů – můžeš doladit číslem */
 }
 
 .hero-content h1 {
@@ -328,4 +336,7 @@ input:focus, textarea:focus { outline: none; border-color: var(--brand); box-sha
   .hero-cta .btn {
     width: 100%;
   }
+
+
+
 }
